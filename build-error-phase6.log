@@ -1,0 +1,35 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar
+> Task :graviton-core:assemble
+
+> Task :graviton-core:detekt
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\api\ParticleConfig.kt:26:42: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\dsl\GravitonDsl.kt:90:24: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\dsl\GravitonDsl.kt:91:27: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\dsl\GravitonDsl.kt:93:29: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\dsl\GravitonDsl.kt:94:25: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-core\src\main\kotlin\services\afroforge\graviton\dsl\GravitonDsl.kt:116:42: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+
+
+> Task :graviton-core:detekt FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-core:detekt'.
+> Analysis failed with 6 weighted issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 26s
+3 actionable tasks: 2 executed, 1 up-to-date

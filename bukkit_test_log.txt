@@ -1,0 +1,54 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin UP-TO-DATE
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar UP-TO-DATE
+> Task :graviton-bukkit:processTestResources NO-SOURCE
+
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:5:12 Unresolved reference 'bukkit'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:6:12 Unresolved reference 'bukkit'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:21:26 Unresolved reference 'Plugin'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:37:19 Cannot access class 'org.bukkit.plugin.Plugin'. Check your module classpath for missing or conflicting dependencies.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:42:27 Cannot access class 'org.bukkit.Location'. Check your module classpath for missing or conflicting dependencies.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:28 Cannot access class 'org.bukkit.Location'. Check your module classpath for missing or conflicting dependencies.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:41 Argument type mismatch: actual type is 'kotlin.Any', but 'org.bukkit.Location' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:45 Unresolved reference 'Location'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:58 Argument type mismatch: actual type is 'kotlin.Long', but 'kotlin.Long' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:62 Argument type mismatch: actual type is 'kotlin.Long', but 'kotlin.Long' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:66 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:46:66 Argument type mismatch: actual type is 'kotlin.Any', but 'java.lang.Runnable' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:51:27 Cannot access class 'org.bukkit.Location'. Check your module classpath for missing or conflicting dependencies.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:68:48 Unresolved reference 'CONSTANT'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:70:30 Unresolved reference 'Location'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:70:50 Argument type mismatch: actual type is 'kotlin.Boolean', but 'kotlin.Boolean' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:75:33 Unresolved reference 'activeEmitterCount'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:82:27 Cannot access class 'org.bukkit.Location'. Check your module classpath for missing or conflicting dependencies.
+> Task :graviton-bukkit:compileTestKotlin FAILED
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:90:48 Unresolved reference 'CONSTANT'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:92:30 Unresolved reference 'Location'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:92:50 Argument type mismatch: actual type is 'kotlin.Boolean', but 'kotlin.Boolean' was expected.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:compileTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 12s
+7 actionable tasks: 1 executed, 6 up-to-date

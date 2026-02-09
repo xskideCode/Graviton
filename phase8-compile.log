@@ -1,0 +1,31 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+
+> Task :graviton-bukkit:compileKotlin FAILED
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/render/DisplayEntityRenderer.kt:38:48 No value passed for parameter 'random'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/render/DisplayEntityRenderer.kt:80:47 No value passed for parameter 'random'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/render/NativeParticleRenderer.kt:32:41 No value passed for parameter 'random'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/render/NativeParticleRenderer.kt:92:47 No value passed for parameter 'random'.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:compileKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 28s
+3 actionable tasks: 1 executed, 2 up-to-date

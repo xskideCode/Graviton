@@ -1,0 +1,51 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-bukkit:loadKtlintReporters UP-TO-DATE
+> Task :graviton-bukkit:runKtlintFormatOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptFormat UP-TO-DATE
+> Task :graviton-bukkit:runKtlintFormatOverTestSourceSet NO-SOURCE
+> Task :graviton-bukkit:ktlintTestSourceSetFormat SKIPPED
+> Task :graviton-bukkit:detekt
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:runKtlintFormatOverMainSourceSet
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptCheck UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverTestSourceSet NO-SOURCE
+> Task :graviton-bukkit:ktlintTestSourceSetCheck SKIPPED
+> Task :graviton-bukkit:processTestResources NO-SOURCE
+
+> Task :graviton-bukkit:ktlintMainSourceSetFormat FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:46:44 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:47:58 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:55:29 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:103:39 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:104:32 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:105:63 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:106:32 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+
+> Task :graviton-bukkit:runKtlintCheckOverMainSourceSet
+> Task :graviton-bukkit:compileKotlin
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:ktlintMainSourceSetFormat'.
+> A failure occurred while executing org.jlleitschuh.gradle.ktlint.worker.ConsoleReportWorkAction
+   > KtLint found code style violations. Please see the following reports:
+     - C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\build\reports\ktlint\ktlintMainSourceSetFormat\ktlintMainSourceSetFormat.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 41s
+13 actionable tasks: 5 executed, 8 up-to-date

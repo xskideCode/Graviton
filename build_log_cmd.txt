@@ -1,0 +1,73 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+
+> Task :graviton-bukkit:detekt
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:18:18: The function execute appears to be too complex based on Cyclomatic Complexity (complexity: 15). Defined complexity threshold for methods is set to '15' [CyclomaticComplexMethod]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:40:22: The caught exception is swallowed. The original exception could be lost. [SwallowedException]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\CommandManager.kt:31:18: Function onCommand has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\CommandManager.kt:57:18: Function onTabComplete has 4 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:18:18: Function execute has 4 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:34:59: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:35:39: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:76:63: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:77:63: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:77:68: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:98:13: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:99:13: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+
+
+> Task :graviton-bukkit:detekt FAILED
+
+> Task :graviton-bukkit:compileKotlin
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/GravitonPlugin.kt:6:43 Unresolved reference 'DisplayParticleRenderer'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/GravitonPlugin.kt:11:36 Unresolved reference 'DisplayParticleRenderer'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/GravitonPlugin.kt:15:20 Unresolved reference 'DisplayParticleRenderer'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/DebugCommand.kt:38:28 Null cannot be a value of a non-null type 'org.bukkit.Location'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:52:43 Argument type mismatch: actual type is 'services.afroforge.graviton.math.Vector3', but 'kotlin.Double' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:52:43 No value passed for parameter 'height'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:52:43 No value passed for parameter 'depth'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:74:25 Argument type mismatch: actual type is 'org.bukkit.Color!', but 'services.afroforge.graviton.data.ColorRange' was expected.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:75:60 Unresolved reference 'Range'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:76:57 Unresolved reference 'Range'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:77:17 No parameter with name 'speed' found.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/command/sub/SpawnCommand.kt:77:57 Unresolved reference 'Range'.
+
+> Task :graviton-bukkit:compileKotlin FAILED
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':graviton-bukkit:detekt'.
+> Analysis failed with 12 weighted issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':graviton-bukkit:compileKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 41s
+4 actionable tasks: 2 executed, 2 up-to-date

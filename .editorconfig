@@ -1,0 +1,13 @@
+# EditorConfig for ktlint
+
+root = true
+
+[*.{kt,kts}]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+max_line_length = 120
+
+# Disable wildcard import check for math files
+[**/math/*.kt]
+ktlint_standard_no-wildcard-imports = disabled

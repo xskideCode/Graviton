@@ -1,0 +1,46 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin UP-TO-DATE
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar
+> Task :graviton-bukkit:assemble
+> Task :graviton-bukkit:detekt UP-TO-DATE
+> Task :graviton-bukkit:loadKtlintReporters UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptCheck UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverMainSourceSet UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverTestSourceSet NO-SOURCE
+> Task :graviton-bukkit:ktlintTestSourceSetCheck SKIPPED
+
+> Task :graviton-bukkit:ktlintMainSourceSetCheck FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\DebugCommand.kt:44:1 Exceeded max line length (120) (cannot be auto-corrected) (standard:max-line-length)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:26:21 A comment in a 'value_parameter_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:56:1 Exceeded max line length (120) (cannot be auto-corrected) (standard:max-line-length)
+
+> Task :graviton-bukkit:shadowJar
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:ktlintMainSourceSetCheck'.
+> A failure occurred while executing org.jlleitschuh.gradle.ktlint.worker.ConsoleReportWorkAction
+   > KtLint found code style violations. Please see the following reports:
+     - C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\build\reports\ktlint\ktlintMainSourceSetCheck\ktlintMainSourceSetCheck.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 42s
+12 actionable tasks: 3 executed, 9 up-to-date

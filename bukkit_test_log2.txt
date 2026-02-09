@@ -1,0 +1,40 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin UP-TO-DATE
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar UP-TO-DATE
+> Task :graviton-bukkit:processTestResources NO-SOURCE
+
+> Task :graviton-bukkit:compileTestKotlin FAILED
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:67:31 None of the following candidates is applicable:
+fun createEmitter(location: Location, emitterConfig: EmitterConfig, particleConfig: ParticleConfig): UUID
+fun createEmitter(entity: Entity, emitterConfig: EmitterConfig, particleConfig: ParticleConfig): UUID
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:70:33 Unresolved reference 'activeEmitterCount'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/test/kotlin/services/afroforge/graviton/emitter/EmitterManagerTest.kt:87:17 None of the following candidates is applicable:
+fun createEmitter(location: Location, emitterConfig: EmitterConfig, particleConfig: ParticleConfig): UUID
+fun createEmitter(entity: Entity, emitterConfig: EmitterConfig, particleConfig: ParticleConfig): UUID
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:compileTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s
+7 actionable tasks: 1 executed, 6 up-to-date

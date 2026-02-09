@@ -1,0 +1,19 @@
+name: Graviton
+version: ${version}
+main: services.afroforge.graviton.GravitonPlugin
+api-version: "1.21"
+author: AfroForge Services
+description: High-performance particle and display entity VFX library
+folia-supported: true
+
+commands:
+  graviton:
+    description: Main command for Graviton plugin
+    usage: /graviton <subcommand>
+    permission: graviton.admin
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  graviton.admin:
+    description: Allows access to all Graviton commands
+    default: op

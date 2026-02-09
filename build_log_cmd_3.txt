@@ -1,0 +1,71 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+
+> Task :graviton-bukkit:compileKotlin
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-bukkit/src/main/kotlin/services/afroforge/graviton/render/DisplayParticleRenderer.kt:52:25 'val' cannot be reassigned.
+
+> Task :graviton-bukkit:compileKotlin FAILED
+
+> Task :graviton-bukkit:detekt FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:20:18: The function execute appears to be too complex based on Cyclomatic Complexity (complexity: 15). Defined complexity threshold for methods is set to '15' [CyclomaticComplexMethod]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:42:22: The caught exception is swallowed. The original exception could be lost. [SwallowedException]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\CommandManager.kt:31:18: Function onCommand has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\CommandManager.kt:57:18: Function onTabComplete has 4 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\DebugCommand.kt:42:1: Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\DebugCommand.kt:50:17: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:20:18: Function execute has 4 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:36:59: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:37:39: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:75:64: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:75:69: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:104:13: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\SpawnCommand.kt:105:13: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:53:40: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:54:41: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:62:37: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:120:24: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:120:29: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:121:24: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:121:29: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:122:24: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:122:29: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:123:21: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:24:5: Private property `plugin` is unused. [UnusedPrivateProperty]
+
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':graviton-bukkit:compileKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':graviton-bukkit:detekt'.
+> Analysis failed with 24 weighted issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 22s
+4 actionable tasks: 2 executed, 2 up-to-date

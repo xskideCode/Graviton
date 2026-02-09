@@ -1,0 +1,38 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-bukkit:loadKtlintReporters UP-TO-DATE
+> Task :graviton-bukkit:runKtlintFormatOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptFormat UP-TO-DATE
+> Task :graviton-bukkit:runKtlintFormatOverTestSourceSet NO-SOURCE
+> Task :graviton-bukkit:ktlintTestSourceSetFormat SKIPPED
+
+> Task :graviton-bukkit:detekt FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayEntityRenderer.kt:130:18: Function calculateLOD has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\NativeParticleRenderer.kt:167:18: Function calculateLOD has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:77:43: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:77:47: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:77:51: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:77:55: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:79:49: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:79:52: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:81:58: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:81:64: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\ParticleRenderer.kt:81:70: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+
+
+> Task :graviton-bukkit:runKtlintFormatOverMainSourceSet
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:detekt'.
+> Analysis failed with 11 weighted issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 29s
+5 actionable tasks: 2 executed, 3 up-to-date

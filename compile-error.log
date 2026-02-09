@@ -1,0 +1,27 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+
+> Task :graviton-core:compileKotlin
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-core/src/main/kotlin/services/afroforge/graviton/data/ValueRange.kt:87:63 Unresolved reference 'Default'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-core/src/main/kotlin/services/afroforge/graviton/data/ValueRange.kt:106:10 Class 'ColorRange.Random' is not abstract and does not implement abstract base class member 'sample'.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-core/src/main/kotlin/services/afroforge/graviton/data/ValueRange.kt:108:9 'sample' overrides nothing.
+e: file:///C:/Users/xskid/OneDrive/Documents/Code/Ai%20projects/Antigravity/minecraft/Graviton/graviton-core/src/main/kotlin/services/afroforge/graviton/util/ObjectPool.kt:83:5 This type is final, so it cannot be extended.
+
+> Task :graviton-core:compileKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-core:compileKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 36s
+1 actionable task: 1 executed
