@@ -31,6 +31,10 @@ class DisplayParticleRenderer(
     private val displays = ConcurrentHashMap<Int, Display>()
     private val nextId = AtomicInteger(0)
 
+    /**
+     * Spawns a new particle display entity.
+     * @return The unique ID of the spawned particle.
+     */
     override fun spawn(
         location: Location,
         config: ParticleConfig,
@@ -145,6 +149,9 @@ class DisplayParticleRenderer(
         )
     }
 
+    /**
+     * Updates an existing particle's properties (position, color, scale).
+     */
     override fun update(
         particleId: Int,
         location: Location,
