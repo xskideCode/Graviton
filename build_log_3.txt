@@ -1,0 +1,64 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:detekt
+> Task :graviton-bukkit:loadKtlintReporters UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptCheck UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverTestSourceSet UP-TO-DATE
+> Task :graviton-bukkit:ktlintTestSourceSetCheck UP-TO-DATE
+> Task :graviton-bukkit:processTestResources NO-SOURCE
+> Task :graviton-core:assemble UP-TO-DATE
+> Task :graviton-core:detekt UP-TO-DATE
+> Task :graviton-core:loadKtlintReporters UP-TO-DATE
+> Task :graviton-core:runKtlintCheckOverKotlinScripts UP-TO-DATE
+> Task :graviton-core:ktlintKotlinScriptCheck UP-TO-DATE
+> Task :graviton-core:runKtlintCheckOverMainSourceSet UP-TO-DATE
+> Task :graviton-core:ktlintMainSourceSetCheck UP-TO-DATE
+> Task :graviton-core:runKtlintCheckOverTestSourceSet UP-TO-DATE
+> Task :graviton-core:ktlintTestSourceSetCheck UP-TO-DATE
+> Task :graviton-core:kaptGenerateStubsTestKotlin UP-TO-DATE
+> Task :graviton-core:kaptTestKotlin SKIPPED
+> Task :graviton-core:compileTestKotlin UP-TO-DATE
+> Task :graviton-core:compileTestJava NO-SOURCE
+> Task :graviton-core:processTestResources NO-SOURCE
+> Task :graviton-core:testClasses UP-TO-DATE
+> Task :graviton-core:test UP-TO-DATE
+> Task :graviton-core:check UP-TO-DATE
+> Task :graviton-core:build UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar
+> Task :graviton-bukkit:assemble
+> Task :graviton-bukkit:runKtlintCheckOverMainSourceSet
+> Task :graviton-bukkit:shadowJar
+
+> Task :graviton-bukkit:ktlintMainSourceSetCheck FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\GravitonPlugin.kt:29:17 Missing trailing comma before ")" (standard:trailing-comma-on-call-site)
+
+> Task :graviton-bukkit:compileTestKotlin UP-TO-DATE
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:ktlintMainSourceSetCheck'.
+> A failure occurred while executing org.jlleitschuh.gradle.ktlint.worker.ConsoleReportWorkAction
+   > KtLint found code style violations. Please see the following reports:
+     - C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\build\reports\ktlint\ktlintMainSourceSetCheck\ktlintMainSourceSetCheck.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 18s
+27 actionable tasks: 6 executed, 21 up-to-date

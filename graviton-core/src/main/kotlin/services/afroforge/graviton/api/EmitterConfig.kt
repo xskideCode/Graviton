@@ -11,19 +11,19 @@ data class EmitterConfig(
     /** Emitter type */
     val type: EmitterType = EmitterType.CONTINUOUS,
     /** Emission rate (particles per second for CONTINUOUS) */
-    val rate: Double = 10.0,
+    val rate: Double = Constants.DEFAULT_EMITTER_RATE,
     /** Burst count (for BURST type) */
-    val burstCount: Int = 100,
+    val burstCount: Int = Constants.DEFAULT_BURST_COUNT,
     /** Shape from which particles spawn */
     val shape: EmitterShape = EmitterShape.Point,
     /** Maximum active particles */
-    val maxParticles: Int = 1000,
+    val maxParticles: Int = Constants.DEFAULT_MAX_PARTICLES,
     /** Tick rate (calculations per second) */
-    val tickRate: Int = 20,
+    val tickRate: Int = Constants.DEFAULT_TICK_RATE,
     /** Duration in seconds (0 = infinite) */
     val duration: Double = 0.0,
     /** Movement threshold for TRAIL type (in blocks) */
-    val movementThreshold: Double = 0.1,
+    val movementThreshold: Double = Constants.DEFAULT_MOVEMENT_THRESHOLD,
 ) {
     init {
         require(rate > 0.0) { "Rate must be positive" }

@@ -2,6 +2,7 @@
 
 package services.afroforge.graviton.data
 
+import services.afroforge.graviton.math.Vector3
 import kotlin.random.Random
 
 /**
@@ -55,6 +56,22 @@ sealed class ValueRange<T> {
         }
     }
 
+    /**
+     * Random vector within a box.
+     */
+    data class UniformVector(
+        val min: Vector3,
+        val max: Vector3,
+    ) : ValueRange<Vector3>() {
+        override fun sample(random: Random): Vector3 {
+            return Vector3(
+                min.x + random.nextDouble() * (max.x - min.x),
+                min.y + random.nextDouble() * (max.y - min.y),
+                min.z + random.nextDouble() * (max.z - min.z),
+            )
+        }
+    }
+
     companion object {
         /**
          * Create a constant range.
@@ -89,6 +106,14 @@ sealed class ValueRange<T> {
             mean: Double,
             stdDev: Double,
         ): ValueRange<Double> = Gaussian(mean, stdDev)
+
+        /**
+         * Create a uniform vector range.
+         */
+        fun uniformVector(
+            min: Vector3,
+            max: Vector3,
+        ): ValueRange<Vector3> = UniformVector(min, max)
     }
 }
 

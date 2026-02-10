@@ -1,14 +1,12 @@
 package services.afroforge.graviton.util
 
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNotSame
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 
 class ObjectPoolTest {
-
     class Reusable {
         var id = 0
     }
@@ -16,14 +14,14 @@ class ObjectPoolTest {
     @Test
     fun `test acquire and release`() {
         val pool = ObjectPool({ Reusable() })
-        
+
         val obj1 = pool.acquire()
         obj1.id = 1
         pool.release(obj1)
-        
+
         val obj2 = pool.acquire()
         assertEquals(1, obj2.id) // Should be same object (reused)
-        
+
         // Identity check might fail if ConcurrentLinkedQueue decides to create new? No.
         // But implementation uses poll().
         // If pool was empty, create new.
@@ -34,13 +32,13 @@ class ObjectPoolTest {
     fun `test overflow behavior`() {
         // Max size 1
         val pool = ObjectPool({ Reusable() }, maxSize = 1)
-        
+
         val obj1 = pool.acquire()
         val obj2 = pool.acquire()
-        
+
         pool.release(obj1)
         pool.release(obj2)
-        
+
         assertEquals(1, pool.size())
     }
 
@@ -54,7 +52,7 @@ class ObjectPoolTest {
 
         // Pre-fill? No.
 
-        for (i in 0 until threads) {
+        repeat(threads) {
             Thread {
                 try {
                     repeat(iterations) {
@@ -62,6 +60,7 @@ class ObjectPoolTest {
                         pool.release(obj)
                     }
                 } catch (e: Exception) {
+                    e.printStackTrace()
                     errorCount.incrementAndGet()
                 } finally {
                     latch.countDown()

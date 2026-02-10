@@ -1,17 +1,35 @@
-To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
-Daemon will be stopped at the end of the build 
-
-> Task :graviton-bukkit:detekt
-C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\emitter\EmitterManager.kt:146:22: The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
-
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin UP-TO-DATE
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar UP-TO-DATE
+> Task :graviton-bukkit:assemble UP-TO-DATE
 
 > Task :graviton-bukkit:detekt FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:43:52: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:72: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:76: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:81: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:86: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:91: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:65:59: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:85:43: This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
 Execution failed for task ':graviton-bukkit:detekt'.
-> Analysis failed with 1 weighted issues.
+> Analysis failed with 8 weighted issues.
 
 * Try:
 > Run with --stacktrace option to get the stack trace.
@@ -19,5 +37,5 @@ Execution failed for task ':graviton-bukkit:detekt'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 23s
-1 actionable task: 1 executed
+BUILD FAILED in 5s
+7 actionable tasks: 1 executed, 6 up-to-date

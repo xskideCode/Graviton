@@ -13,7 +13,7 @@ import services.afroforge.graviton.math.Vector3
  */
 data class ParticleConfig(
     /** Particle lifetime in seconds */
-    val lifetime: ValueRange<Double> = ValueRange.constant(1.0),
+    val lifetime: ValueRange<Double> = ValueRange.constant(Constants.DEFAULT_PARTICLE_LIFETIME),
     /** Particle color over lifetime */
     val color: ColorRange = ColorRange.constant(Color.WHITE),
     /** Scale over lifetime (default: constant 1.0) */
@@ -23,11 +23,17 @@ data class ParticleConfig(
     /** Gravity acceleration (default: Earth gravity) */
     val gravity: Vector3 = EARTH_GRAVITY,
     /** Air resistance coefficient [0, 1] */
-    val drag: Double = 0.0,
+    val drag: Double = Constants.DEFAULT_PARTICLE_DRAG,
     /** Rotation over lifetime (radians/second) */
     val rotation: ValueRange<Double> = ValueRange.constant(0.0),
     /** Billboard mode */
     val billboard: BillboardMode = BillboardMode.CENTER,
+    /** Rendering mode (ITEM, TEXT, BLOCK) */
+    val renderMode: RenderMode = RenderMode.TEXT,
+    /** Texture string (Character for TextDisplay, Material name for Item/Block) */
+    val texture: String? = null,
+    /** Radial velocity (speed away from center) */
+    val radialVelocity: Double = Constants.DEFAULT_PARTICLE_RADIAL_VELOCITY,
 ) {
     init {
         require(drag in 0.0..1.0) { "Drag must be between 0 and 1" }
@@ -57,4 +63,18 @@ enum class BillboardMode {
 
     /** No billboarding */
     FIXED,
+}
+
+/**
+ * Rendering mode for the particle.
+ */
+enum class RenderMode {
+    /** Item Display (3D items/blocks) */
+    ITEM,
+
+    /** Block Display (3D blocks) */
+    BLOCK,
+
+    /** Text Display (2D text/images via resource pack) */
+    TEXT,
 }

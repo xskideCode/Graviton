@@ -9,6 +9,7 @@ import services.afroforge.graviton.api.EmitterConfig
 import services.afroforge.graviton.api.EmitterType
 import services.afroforge.graviton.api.ParticleConfig
 import services.afroforge.graviton.emitter.ShapeUtils.getRandomPoint
+import services.afroforge.graviton.math.Vector3
 import services.afroforge.graviton.render.ParticleRenderer
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
@@ -89,7 +90,38 @@ abstract class Emitter(
         if (particleId < 0) return null
 
         // Calculate initial velocity from config
-        val velocity = particleConfig.velocity.sample(Random)
+        val baseVelocity = particleConfig.velocity.sample(Random)
+        var velocityX = baseVelocity.x
+        var velocityY = baseVelocity.y
+        var velocityZ = baseVelocity.z
+
+        // Apply radial velocity if configured
+        if (particleConfig.radialVelocity != 0.0) {
+            // Vector from center to spawn location
+            val center = location
+            var dx = spawnLocation.x - center.x
+            var dy = spawnLocation.y - center.y
+            var dz = spawnLocation.z - center.z
+
+            val lengthSq = dx * dx + dy * dy + dz * dz
+            if (lengthSq > 0.0001) {
+                val length = kotlin.math.sqrt(lengthSq)
+                dx /= length
+                dy /= length
+                dz /= length
+
+                velocityX += dx * particleConfig.radialVelocity
+                velocityY += dy * particleConfig.radialVelocity
+                velocityZ += dz * particleConfig.radialVelocity
+            } else {
+                // If at center (e.g. Point shape), radial velocity acts as random spherical burst
+                // Or we can ignore it. For now, random direction.
+                val rVec = Vector3.random(Random).normalize()
+                velocityX += rVec.x * particleConfig.radialVelocity
+                velocityY += rVec.y * particleConfig.radialVelocity
+                velocityZ += rVec.z * particleConfig.radialVelocity
+            }
+        }
 
         particles[particleId] =
             ParticlePool.acquire(
@@ -98,9 +130,9 @@ abstract class Emitter(
                 spawnTime = System.currentTimeMillis(),
                 lifetimeMs = lifetimeMs,
                 location = spawnLocation,
-                velocityX = velocity.x,
-                velocityY = velocity.y,
-                velocityZ = velocity.z,
+                velocityX = velocityX,
+                velocityY = velocityY,
+                velocityZ = velocityZ,
             )
 
         return particleId
@@ -114,14 +146,19 @@ abstract class Emitter(
         val deltaSeconds = deltaMs / 1000.0
         val toRemove = mutableListOf<Int>()
 
-        particles.forEach { (id, particle) ->
+        val iterator = particles.entries.iterator()
+        while (iterator.hasNext()) {
+            val entry = iterator.next()
+            val id = entry.key
+            val particle = entry.value
+
             val age = now - particle.spawnTime
             val progress = (age.toDouble() / particle.lifetimeMs).coerceIn(0.0, 1.0)
 
             // Check if particle expired
             if (age >= particle.lifetimeMs) {
                 toRemove.add(id)
-                return@forEach
+                continue
             }
 
             // Apply gravity
@@ -140,8 +177,12 @@ abstract class Emitter(
                 particle.velocityZ * deltaSeconds,
             )
 
+            // Calculate visual properties
+            val color = particleConfig.color.sample(progress, Random)
+            val scale = particleConfig.scale.evaluate(progress)
+
             // Update renderer
-            renderer.update(id, particle.location, progress)
+            renderer.update(id, particle.location, color, scale)
         }
 
         // Remove expired particles
@@ -236,7 +277,10 @@ class EntityEmitter(
     private var lastSpawnTime = 0L
     private val spawnIntervalMs = (1000.0 / emitterConfig.rate).toLong()
     private var hasEmittedBurst = false
-    private var lastLocation: Location? = null
+
+    private var lastX: Double? = null
+    private var lastY: Double? = null
+    private var lastZ: Double? = null
 
     override fun tick(deltaMs: Long) {
         if (!isActive || !entity.isValid) {
@@ -261,7 +305,15 @@ class EntityEmitter(
         // Update existing particles
         updateParticles(deltaMs)
 
-        lastLocation = location.clone()
+        if (lastX == null) {
+            lastX = location.x
+            lastY = location.y
+            lastZ = location.z
+        } else {
+            lastX = location.x
+            lastY = location.y
+            lastZ = location.z
+        }
     }
 
     private fun tickConstant() {
@@ -282,10 +334,19 @@ class EntityEmitter(
     }
 
     private fun tickMovement() {
-        val last = lastLocation ?: return
-        val distance = location.distance(last)
+        val lx = lastX
+        val ly = lastY
+        val lz = lastZ
 
-        if (distance >= emitterConfig.movementThreshold) {
+        if (lx == null || ly == null || lz == null) return
+
+        val dx = location.x - lx
+        val dy = location.y - ly
+        val dz = location.z - lz
+
+        val distanceSq = dx * dx + dy * dy + dz * dz
+
+        if (distanceSq >= emitterConfig.movementThreshold * emitterConfig.movementThreshold) {
             spawnParticle(getShapeSpawnLocation())
         }
     }

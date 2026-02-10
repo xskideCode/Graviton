@@ -3,10 +3,8 @@ package services.afroforge.graviton.math
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.math.abs
 
 class Vector3Test {
-
     @Test
     fun `test MutableVector3 addition`() {
         val v1 = MutableVector3(1.0, 2.0, 3.0)

@@ -1,0 +1,34 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:processTestResources NO-SOURCE
+> Task :graviton-core:processTestResources NO-SOURCE
+> Task :detekt NO-SOURCE
+
+> Task :graviton-bukkit:detekt FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:34:18: The function spawn is too long (65). The maximum length is 60. [LongMethod]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\render\DisplayParticleRenderer.kt:34:18: The function spawn appears to be too complex based on Cyclomatic Complexity (complexity: 18). Defined complexity threshold for methods is set to '15' [CyclomaticComplexMethod]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:28:18: Function execute has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\emitter\Emitter.kt:336:17: Function tickMovement has 3 return statements which exceeds the limit of 2. [ReturnCount]
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\test\kotlin\services\afroforge\graviton\emitter\EmitterManagerTest.kt:3:1: io.mockk.* is a wildcard import. Replace it with fully qualified imports. [WildcardImport]
+
+
+> Task :graviton-core:compileKotlin
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:detekt'.
+> Analysis failed with 5 weighted issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 15s
+4 actionable tasks: 2 executed, 2 up-to-date

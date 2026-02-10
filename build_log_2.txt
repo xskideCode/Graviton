@@ -1,0 +1,69 @@
+> Task :graviton-bukkit:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :graviton-core:kaptGenerateStubsKotlin UP-TO-DATE
+> Task :graviton-core:kaptKotlin SKIPPED
+> Task :graviton-core:compileKotlin UP-TO-DATE
+> Task :graviton-core:compileJava NO-SOURCE
+> Task :graviton-core:processResources NO-SOURCE
+> Task :graviton-core:classes UP-TO-DATE
+> Task :graviton-core:jar UP-TO-DATE
+> Task :graviton-bukkit:compileKotlin UP-TO-DATE
+> Task :graviton-bukkit:compileJava NO-SOURCE
+> Task :graviton-bukkit:processResources UP-TO-DATE
+> Task :graviton-bukkit:classes UP-TO-DATE
+> Task :graviton-bukkit:jar
+> Task :graviton-bukkit:assemble
+> Task :graviton-bukkit:detekt UP-TO-DATE
+> Task :graviton-bukkit:loadKtlintReporters UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverKotlinScripts UP-TO-DATE
+> Task :graviton-bukkit:ktlintKotlinScriptCheck UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverMainSourceSet UP-TO-DATE
+> Task :graviton-bukkit:runKtlintCheckOverTestSourceSet UP-TO-DATE
+> Task :graviton-bukkit:ktlintTestSourceSetCheck UP-TO-DATE
+
+> Task :graviton-bukkit:ktlintMainSourceSetCheck FAILED
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\GravitonPlugin.kt:29:17 Missing trailing comma before ")" (standard:trailing-comma-on-call-site)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:250:59 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:251:59 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:252:59 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:253:59 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:254:59 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\command\sub\EffectCommand.kt:264:45 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:6:1 Unused import (standard:no-unused-imports)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:29:1 Class body should not start with blank line (standard:no-empty-first-line-in-class-body)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:49:1 Trailing space(s) (standard:no-trailing-spaces)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:54:26 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:61:28 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:63:68 Trailing space(s) (standard:no-trailing-spaces)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:65:21 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:68:68 Missing trailing comma before ")" (standard:trailing-comma-on-call-site)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:70:69 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:72:33 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:75:1 Trailing space(s) (standard:no-trailing-spaces)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:79:26 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:86:28 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:89:21 A multiline expression should start on a new line (standard:multiline-expression-wrapping)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:91:68 Missing trailing comma before ")" (standard:trailing-comma-on-call-site)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:91:69 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:93:35 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:94:69 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\src\main\kotlin\services\afroforge\graviton\listener\AnvilKillListener.kt:96:33 A comment in a 'value_argument_list' is only allowed when placed on a separate line (cannot be auto-corrected) (standard:discouraged-comment-location)
+
+> Task :graviton-bukkit:shadowJar
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':graviton-bukkit:ktlintMainSourceSetCheck'.
+> A failure occurred while executing org.jlleitschuh.gradle.ktlint.worker.ConsoleReportWorkAction
+   > KtLint found code style violations. Please see the following reports:
+     - C:\Users\xskid\OneDrive\Documents\Code\Ai projects\Antigravity\minecraft\Graviton\graviton-bukkit\build\reports\ktlint\ktlintMainSourceSetCheck\ktlintMainSourceSetCheck.txt
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s
+15 actionable tasks: 3 executed, 12 up-to-date

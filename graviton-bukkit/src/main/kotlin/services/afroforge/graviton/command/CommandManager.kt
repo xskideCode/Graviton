@@ -25,6 +25,7 @@ class CommandManager(
     private val subCommands =
         mapOf(
             "spawn" to SpawnCommand(emitterManager),
+            "effect" to services.afroforge.graviton.command.sub.EffectCommand(emitterManager),
             "list" to ListCommand(emitterManager),
             "killall" to KillAllCommand(emitterManager),
             "debug" to DebugCommand(plugin, emitterManager),

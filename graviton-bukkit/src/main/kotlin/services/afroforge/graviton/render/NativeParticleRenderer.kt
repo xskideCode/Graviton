@@ -85,13 +85,16 @@ class NativeParticleRenderer(
     override fun update(
         particleId: Int,
         location: Location,
-        progress: Double,
+        color: services.afroforge.graviton.data.Color?,
+        scale: Double?,
     ) {
         val state = activeParticles[particleId] ?: return
 
-        // Sample current color and scale
-        val color = state.config.color.sample(progress, Random)
-        val scale = state.config.scale.evaluate(progress).toFloat()
+        // Use passed values or defaults/stored config (fallback)
+        // Since we refactored Emitter to pass values, we expect them here.
+        // But for safety, fallback to defaults.
+        val finalColor = color ?: state.config.color.sample(0.0, Random)
+        val finalScale = (scale ?: state.config.scale.evaluate(0.0)).toFloat()
 
         // Calculate LOD
         val nearestViewer = findNearestViewer(location, state.viewers)
@@ -117,11 +120,11 @@ class NativeParticleRenderer(
         val dustOptions =
             Particle.DustOptions(
                 org.bukkit.Color.fromRGB(
-                    (color.r * 255).toInt().coerceIn(0, 255),
-                    (color.g * 255).toInt().coerceIn(0, 255),
-                    (color.b * 255).toInt().coerceIn(0, 255),
+                    (finalColor.r * 255).toInt().coerceIn(0, 255),
+                    (finalColor.g * 255).toInt().coerceIn(0, 255),
+                    (finalColor.b * 255).toInt().coerceIn(0, 255),
                 ),
-                (scale * lodScale).coerceIn(0.1f, 4.0f),
+                (finalScale * lodScale).coerceIn(0.1f, 4.0f),
             )
 
         // Spawn new particle at updated location

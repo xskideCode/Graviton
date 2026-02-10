@@ -29,7 +29,7 @@ subprojects {
     tasks.withType<Test> {
         useJUnitPlatform()
     }
-    
+
     ktlint {
         verbose.set(true)
         android.set(false)
@@ -37,8 +37,9 @@ subprojects {
         ignoreFailures.set(false)
         enableExperimentalRules.set(false)
     }
-    
+
     detekt {
+
         buildUponDefaultConfig = true
         allRules = false // Enable standard rules
         config.setFrom(rootProject.files("config/detekt/detekt.yml"))

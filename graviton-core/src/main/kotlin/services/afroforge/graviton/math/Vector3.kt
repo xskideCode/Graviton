@@ -54,6 +54,14 @@ data class Vector3(
         val UNIT_X = Vector3(1.0, 0.0, 0.0)
         val UNIT_Y = Vector3(0.0, 1.0, 0.0)
         val UNIT_Z = Vector3(0.0, 0.0, 1.0)
+
+        fun random(random: kotlin.random.Random): Vector3 {
+            return Vector3(
+                random.nextDouble() * 2.0 - 1.0,
+                random.nextDouble() * 2.0 - 1.0,
+                random.nextDouble() * 2.0 - 1.0,
+            )
+        }
     }
 }
 

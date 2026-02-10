@@ -33,7 +33,8 @@ interface ParticleRenderer {
     fun update(
         particleId: Int,
         location: Location,
-        progress: Double,
+        color: services.afroforge.graviton.data.Color? = null,
+        scale: Double? = null,
     )
 
     /**

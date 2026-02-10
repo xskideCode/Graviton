@@ -5,6 +5,10 @@ import services.afroforge.graviton.command.CommandManager
 import services.afroforge.graviton.emitter.EmitterManager
 import services.afroforge.graviton.render.DisplayParticleRenderer
 
+/**
+ * Main entry point for the Graviton particle plugin.
+ * Handles lifecycle, command registration, and the ticker loop.
+ */
 class GravitonPlugin : JavaPlugin() {
     private lateinit var emitterManager: EmitterManager
     private lateinit var commandManager: CommandManager
@@ -22,6 +26,12 @@ class GravitonPlugin : JavaPlugin() {
         // Register Commands
         getCommand("graviton")?.setExecutor(commandManager)
         getCommand("graviton")?.tabCompleter = commandManager
+
+        // Register Listeners
+        server.pluginManager.registerEvents(
+            services.afroforge.graviton.listener.AnvilKillListener(emitterManager),
+            this,
+        )
 
         logger.info("Graviton v${description.version} enabled with display-entity renderer.")
     }
